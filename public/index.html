@@ -24,7 +24,7 @@
 
   /* HERO */
   .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 20px 60px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(56,189,248,.07) 0%,transparent 70%)}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(56,189,248,.07) 0%,transparent 70%);pointer-events:none}
   .hero-eyebrow{font-size:11px;letter-spacing:5px;color:var(--blue);font-weight:700;margin-bottom:16px;opacity:.9}
   .hero-title{font-size:clamp(36px,7vw,72px);font-weight:900;line-height:1.1;letter-spacing:-2px;margin-bottom:16px}
   .hero-title .whale{color:var(--green);display:block}
