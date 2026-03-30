@@ -106,6 +106,24 @@
   .result-pair{font-size:11px;color:var(--muted);margin-bottom:4px;letter-spacing:2px}
   .result-rr{font-size:28px;font-weight:900;color:var(--green)}
   .result-method{font-size:11px;color:var(--subtle);margin-top:4px}
+  .result-detail{font-size:12px;color:var(--muted);margin-top:6px;letter-spacing:1px}
+  .result-date{font-size:11px;color:var(--muted);margin-top:2px}
+
+  /* ── ACADEMY ── */
+  .academy-intro{font-size:15px;color:var(--subtle);line-height:2;margin-bottom:32px}
+  .academy-intro strong{color:var(--text)}
+  .academy-cards{display:flex;flex-direction:column;gap:12px;margin:24px 0}
+  .academy-card{background:var(--card);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;border-left:4px solid var(--blue)}
+  .academy-card .ac-chapter{font-size:11px;letter-spacing:2px;color:var(--blue);font-weight:700}
+  .academy-card .ac-title{font-size:15px;font-weight:800;color:#fff;margin:4px 0}
+  .academy-card .ac-desc{font-size:13px;color:var(--subtle);line-height:1.8}
+  .academy-card .ac-count{font-size:11px;font-weight:700;color:var(--green);margin-top:6px;letter-spacing:1px}
+  .academy-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0}
+  .academy-stat{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center}
+  .academy-stat .as-num{font-size:28px;font-weight:900;color:var(--blue);line-height:1.1;margin-bottom:6px}
+  .academy-stat .as-label{font-size:11px;color:var(--muted);letter-spacing:1px}
+  .academy-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,#059669,#10b981);color:#fff;font-size:16px;font-weight:800;padding:16px 40px;border-radius:999px;text-decoration:none;letter-spacing:1px;margin-top:16px;transition:.2s;box-shadow:0 0 40px rgba(74,222,128,.2)}
+  .academy-cta:hover{transform:scale(1.04);box-shadow:0 0 60px rgba(74,222,128,.35)}
 
   /* ── PROVIDE ── */
   .provide-list{display:flex;flex-direction:column;gap:10px;margin:24px 0}
@@ -330,26 +348,87 @@
 <!-- RESULTS -->
 <section class="fade-in">
   <p class="section-label">RESULTS</p>
-  <h2 class="section-title">損切り<span>10pips</span>で<br>利確100〜500pips超。</h2>
+  <h2 class="section-title">直近の<span>損益実績</span></h2>
 
   <div class="results">
     <div class="result-card">
-      <div class="result-pair">USDJPY</div>
-      <div class="result-rr">RR 1:52</div>
-      <div class="result-method">🐙 KRAKEN</div>
-    </div>
-    <div class="result-card">
-      <div class="result-pair">GBPJPY</div>
-      <div class="result-rr">RR 1:54</div>
-      <div class="result-method">🕳 ABYSS</div>
+      <div class="result-pair">AUDJPY</div>
+      <div class="result-rr">+85,500<span style="font-size:14px;font-weight:600">円</span></div>
+      <div class="result-method">🌊 TIDE</div>
+      <div class="result-detail">111.728 → 111.899</div>
+      <div class="result-date">2026.03.19</div>
     </div>
     <div class="result-card">
       <div class="result-pair">EURUSD</div>
-      <div class="result-rr">RR 1:58</div>
+      <div class="result-rr">+340,399<span style="font-size:14px;font-weight:600">円</span></div>
       <div class="result-method">🌀 CURRENT</div>
+      <div class="result-detail">1.14268 → 1.14696</div>
+      <div class="result-date">2026.03.19</div>
+    </div>
+    <div class="result-card">
+      <div class="result-pair">GBPJPY</div>
+      <div class="result-rr">+109,500<span style="font-size:14px;font-weight:600">円</span></div>
+      <div class="result-method">🕳 ABYSS</div>
+      <div class="result-detail">210.953 → 211.172</div>
+      <div class="result-date">2026.03.19</div>
     </div>
   </div>
-  <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:4px">リスクリワードが壊れているポイントだけを狙う設計</p>
+  <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:4px">※ 5ロット運用時の実績</p>
+</section>
+
+<hr class="divider" style="max-width:860px;margin:0 auto">
+
+<!-- ACADEMY -->
+<section id="academy" class="fade-in">
+  <p class="section-label">LEVIATHAN ACADEMY</p>
+  <h2 class="section-title">LEVIATHANは、ここで<span>終わらない。</span><br>日本人のFXリテラシーを、底上げする。</h2>
+  <p class="academy-intro">シグナルを受け取るだけでなく、<strong>なぜそこでエントリーするのかを理解してほしい。</strong>FXで本当に勝てる人間を増やすために、LEVIATHAN ACADEMYを立ち上げました。初心者から上級者まで、相場の本質から学べる<strong>30講義</strong>を順次公開します。</p>
+
+  <div class="academy-cards">
+    <div class="academy-card">
+      <div>
+        <div class="ac-chapter">CHAPTER 0</div>
+        <div class="ac-title">FX基礎</div>
+        <div class="ac-desc">ローソク足・トレンド・サポレジの本質</div>
+        <div class="ac-count">5講義</div>
+      </div>
+    </div>
+    <div class="academy-card">
+      <div>
+        <div class="ac-chapter">CHAPTER 1</div>
+        <div class="ac-title">勝ち組の思考</div>
+        <div class="ac-desc">期待値思考・潜在意識・資金管理の哲学</div>
+        <div class="ac-count">5講義</div>
+      </div>
+    </div>
+    <div class="academy-card">
+      <div>
+        <div class="ac-chapter">CHAPTER 2〜6</div>
+        <div class="ac-title">TIDE・ABYSS・CURRENT・KRAKEN</div>
+        <div class="ac-desc">4手法の完全解説・AIシステムの仕組み</div>
+        <div class="ac-count">20講義</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="academy-stats">
+    <div class="academy-stat">
+      <div class="as-num">30</div>
+      <div class="as-label">講義</div>
+    </div>
+    <div class="academy-stat">
+      <div class="as-num">0円</div>
+      <div class="as-label">会員限定・追加費用なし</div>
+    </div>
+    <div class="academy-stat">
+      <div class="as-num">初心者〜</div>
+      <div class="as-label">FX未経験でも学べる</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:24px">
+    <a href="https://lin.ee/Pp2ng1h" target="_blank" class="academy-cta">💬 LINEでアカデミーの詳細を見る →</a>
+  </div>
 </section>
 
 <hr class="divider" style="max-width:860px;margin:0 auto">
