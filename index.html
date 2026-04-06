@@ -8,40 +8,40 @@
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{
-    --bg:#020810;
-    --surface:#080f1e;
-    --card:#0c1628;
-    --border:#1a3050;
-    --green:#4ade80;
-    --green-dim:#166534;
-    --blue:#38bdf8;
-    --amber:#fbbf24;
-    --red:#f87171;
-    --text:#e2e8f0;
+    --bg:#ffffff;
+    --surface:#f8fafc;
+    --card:#f1f5f9;
+    --border:#e2e8f0;
+    --green:#059669;
+    --green-dim:#d1fae5;
+    --blue:#0284c7;
+    --amber:#d97706;
+    --red:#dc2626;
+    --text:#0f172a;
     --muted:#64748b;
-    --subtle:#94a3b8;
+    --subtle:#475569;
   }
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);font-family:'Hiragino Sans','Noto Sans JP',sans-serif;line-height:1.7;overflow-x:hidden}
 
   /* ── NAV ── */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(2,8,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(56,189,248,.15)}
-  .nav-logo{font-size:18px;font-weight:900;letter-spacing:3px;color:#fff}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-logo{font-size:18px;font-weight:900;letter-spacing:3px;color:var(--text)}
   .nav-logo span{color:var(--green)}
   .nav-cta{background:var(--green);color:#052e16;font-size:13px;font-weight:800;padding:8px 20px;border-radius:999px;text-decoration:none;letter-spacing:1px;transition:.2s}
   .nav-cta:hover{opacity:.85;transform:scale(1.03)}
 
   /* ── HERO ── */
   .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 20px 60px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(56,189,248,.07) 0%,transparent 70%)}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(2,132,199,.05) 0%,transparent 70%)}
   .hero-eyebrow{font-size:11px;letter-spacing:5px;color:var(--blue);font-weight:700;margin-bottom:16px;opacity:.9}
   .hero-title{font-size:clamp(36px,7vw,72px);font-weight:900;line-height:1.1;letter-spacing:-2px;margin-bottom:16px}
   .hero-title .whale{color:var(--green);display:block}
   .hero-title .sub{font-size:clamp(18px,3vw,28px);color:var(--subtle);font-weight:400;letter-spacing:0;margin-top:8px;display:block}
   .hero-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0}
-  .badge{background:rgba(26,48,80,.8);border:1px solid var(--border);border-radius:999px;padding:6px 16px;font-size:12px;color:var(--subtle);letter-spacing:1px}
-  .badge.green{border-color:var(--green-dim);color:var(--green)}
-  .badge.amber{border-color:#92400e;color:var(--amber)}
+  .badge{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 16px;font-size:12px;color:var(--subtle);letter-spacing:1px}
+  .badge.green{border-color:#6ee7b7;color:var(--green);background:#f0fdf4}
+  .badge.amber{border-color:#fcd34d;color:var(--amber);background:#fffbeb}
   .hero-cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,#059669,#10b981);color:#fff;font-size:16px;font-weight:800;padding:16px 40px;border-radius:999px;text-decoration:none;letter-spacing:1px;margin-top:8px;transition:.2s;box-shadow:0 0 40px rgba(74,222,128,.2)}
   .hero-cta:hover{transform:scale(1.04);box-shadow:0 0 60px rgba(74,222,128,.35)}
   .hero-cta-sub{font-size:12px;color:var(--muted);margin-top:12px}
@@ -88,12 +88,12 @@
   .method.current{border-color:#06b6d4}
   .method.kraken{border-color:#f59e0b}
   .method-icon{font-size:24px;flex-shrink:0;margin-top:2px}
-  .method-name{font-size:15px;font-weight:800;color:#fff;margin-bottom:4px}
+  .method-name{font-size:15px;font-weight:800;color:var(--text);margin-bottom:4px}
   .method-desc{font-size:13px;color:var(--subtle);line-height:1.8}
   .method-rr{font-size:11px;font-weight:700;color:var(--green);margin-top:6px;letter-spacing:1px}
 
   /* ── LINE通知 ── */
-  .line-preview{background:#0a1f0a;border:1px solid #166534;border-radius:12px;padding:20px;font-size:13px;line-height:2.1;margin:24px 0;font-family:monospace}
+  .line-preview{background:#f0fdf4;border:1px solid #6ee7b7;border-radius:12px;padding:20px;font-size:13px;line-height:2.1;margin:24px 0;font-family:monospace}
   .line-preview .title{color:var(--green);font-weight:700;font-size:14px;margin-bottom:8px}
   .line-preview .row{color:var(--text)}
   .line-preview .row span{color:var(--muted)}
@@ -115,7 +115,7 @@
   .academy-cards{display:flex;flex-direction:column;gap:12px;margin:24px 0}
   .academy-card{background:var(--card);border-radius:10px;padding:18px 20px;display:flex;gap:16px;align-items:flex-start;border-left:4px solid var(--blue)}
   .academy-card .ac-chapter{font-size:11px;letter-spacing:2px;color:var(--blue);font-weight:700}
-  .academy-card .ac-title{font-size:15px;font-weight:800;color:#fff;margin:4px 0}
+  .academy-card .ac-title{font-size:15px;font-weight:800;color:var(--text);margin:4px 0}
   .academy-card .ac-desc{font-size:13px;color:var(--subtle);line-height:1.8}
   .academy-card .ac-count{font-size:11px;font-weight:700;color:var(--green);margin-top:6px;letter-spacing:1px}
   .academy-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:24px 0}
@@ -135,11 +135,11 @@
   /* ── FAQ ── */
   .faq-list{display:flex;flex-direction:column;gap:12px;margin:24px 0}
   .faq-item{background:var(--card);border-radius:10px;padding:16px 18px}
-  .faq-q{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+  .faq-q{font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px}
   .faq-a{font-size:13px;color:var(--subtle);line-height:1.8}
 
   /* ── CTA FINAL ── */
-  .cta-final{background:linear-gradient(160deg,#041530,#0a2010);border:1px solid rgba(74,222,128,.2);border-radius:16px;padding:48px 24px;text-align:center;margin:40px 0}
+  .cta-final{background:linear-gradient(160deg,#f0fdf4,#f8fafc);border:1px solid #6ee7b7;border-radius:16px;padding:48px 24px;text-align:center;margin:40px 0}
   .cta-final-title{font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.3;margin-bottom:16px}
   .cta-final-title span{color:var(--green)}
   .cta-final-sub{font-size:14px;color:var(--subtle);margin-bottom:32px;line-height:1.9}
@@ -149,7 +149,7 @@
   .cta-btn:hover{transform:scale(1.04);box-shadow:0 0 60px rgba(74,222,128,.4)}
 
   /* ── DISCLAIMER ── */
-  .disclaimer{padding:32px 20px;max-width:860px;margin:0 auto;text-align:center;font-size:11px;color:#334155;line-height:1.9;border-top:1px solid var(--border)}
+  .disclaimer{padding:32px 20px;max-width:860px;margin:0 auto;text-align:center;font-size:11px;color:#94a3b8;line-height:1.9;border-top:1px solid var(--border)}
 
   /* ── MOBILE ── */
   @media(max-width:600px){
@@ -182,7 +182,7 @@
 <!-- NAV -->
 <nav>
   <div class="nav-logo">🐋 LEVIA<span>THAN</span></div>
-  <a href="https://www.gogojungle.co.jp/tools/indicators/77314" target="_blank" class="nav-cta">購入する →</a>
+  <a href="https://lin.ee/Pp2ng1h" target="_blank" class="nav-cta">LINEで無料相談 →</a>
 </nav>
 
 <!-- HERO -->
@@ -197,19 +197,16 @@
     <span class="badge green">RR 1:52 実績</span>
     <span class="badge">EAなし・MT4なし</span>
     <span class="badge">24時間監視不要</span>
-    <span class="badge amber">月5名限定</span>
     <span class="badge">リアルタイムファンダ自動取得</span>
   </div>
-  <a href="https://www.gogojungle.co.jp/tools/indicators/77314" target="_blank" class="hero-cta">
-    GogoJungleで購入する →
+  <a href="https://lin.ee/Pp2ng1h" target="_blank" class="hero-cta">
+    LINEで無料相談する →
   </a>
-  <p class="hero-cta-sub">¥98,000（税込）/ 残り5本</p>
+  <p class="hero-cta-sub">¥498,000（税込）</p>
 </div>
 
 <!-- STATS -->
 <div class="stats fade-in">
-  <div class="stat g"><div class="stat-num">8,000万</div><div class="stat-label">2025年単年利益</div></div>
-  <div class="stat g"><div class="stat-num">累計1億+</div><div class="stat-label">累計利益</div></div>
   <div class="stat b"><div class="stat-num">2,700人</div><div class="stat-label">TikTok 開設2週間</div></div>
   <div class="stat b"><div class="stat-num">60万回</div><div class="stat-label">TikTok総再生</div></div>
   <div class="stat a"><div class="stat-num">500人</div><div class="stat-label">Discord 開設2日</div></div>
@@ -225,7 +222,7 @@
 
   <p class="story-text">
     TikTok開設2週間でフォロワー2,700人・総再生60万回。<br>
-    2025年次で<strong>8,000万を達成</strong>していますが、<em>正直、裁量だけでやるのはもう限界を感じていました。</em>
+    <em>裁量だけでやるのはもう限界を感じていました。</em>
   </p>
   <p class="story-text">
     だから、<strong>5年以上かけて磨いた手法をそのままAIに実装しました。</strong><br>
@@ -239,14 +236,7 @@
     ClaudeのAIアライメント設計にも哲学的アプローチが使われており、AIとの対話設計において独自のアドバンテージがあります。
   </div>
 
-  <div style="background:#1a0a0a;border:1px solid #7f1d1d;border-radius:10px;padding:18px 20px;margin-top:20px">
-    <p style="font-size:13px;color:#fca5a5;font-weight:700;margin-bottom:8px">⚠️ 正直に言います</p>
-    <p style="font-size:13px;color:var(--subtle);line-height:1.9">
-      現在、<strong style="color:#fff">API使用料でこのサービスは赤字運営</strong>です。<br>
-      それでも公開しているのは、このシステムの実力を多くの方に試してほしいから。<br>
-      だからこそ、<strong style="color:var(--amber)">月5名限定</strong>で本気でサポートします。
-    </p>
-  </div>
+
 </section>
 
 <hr class="divider" style="max-width:860px;margin:0 auto">
@@ -268,9 +258,9 @@
     </div>
   </div>
 
-  <div style="background:#0a1628;border:1px solid var(--border);border-radius:10px;padding:18px 20px;text-align:center">
+  <div style="background:#f0fdf4;border:1px solid #6ee7b7;border-radius:10px;padding:18px 20px;text-align:center">
     <p style="font-size:14px;color:var(--green);font-weight:700;margin-bottom:8px">🌐 AIが経済指標・中央銀行発言・地政学リスクをリアルタイムで検索</p>
-    <p style="font-size:13px;color:var(--subtle);line-height:1.8">テクニカル＋ファンダを<strong style="color:#fff">Claude AIが統合判断</strong>してLINEに通知。<br>人間がファンダを調べる手間はゼロです。</p>
+    <p style="font-size:13px;color:var(--subtle);line-height:1.8">テクニカル＋ファンダを<strong style="color:var(--text)">Claude AIが統合判断</strong>してLINEに通知。<br>人間がファンダを調べる手間はゼロです。</p>
   </div>
 </section>
 
@@ -461,10 +451,7 @@
       <div class="provide-num">④</div>
       <div><div class="provide-text">4手法の解説教材（動画付き）</div></div>
     </div>
-    <div class="provide-item">
-      <div class="provide-num">⑤</div>
-      <div><div class="provide-text">購入後30日間サポート</div></div>
-    </div>
+
   </div>
 </section>
 
@@ -508,10 +495,10 @@
       エントリーから損切り・利確まですべてLINEに届ける。<br>
       あなたは指値を置くだけ。
     </p>
-    <div class="cta-final-price">¥98,000（税込）</div>
-    <p class="cta-final-limit">⚠️ 月5名限定 — 残り5本</p>
-    <a href="https://www.gogojungle.co.jp/tools/indicators/77314" target="_blank" class="cta-btn">
-      GogoJungleで購入する →
+    <div class="cta-final-price">¥498,000（税込）</div>
+    <p class="cta-final-limit" style="color:var(--subtle);font-weight:400;">クレジットカード分割払い対応</p>
+    <a href="https://lin.ee/Pp2ng1h" target="_blank" class="cta-btn">
+      LINEで無料相談する →
     </a>
   </div>
 </div>
@@ -520,7 +507,8 @@
 <div class="disclaimer">
   ※ 本サービスはツールの提供であり、利益を保証するものではありません。<br>
   投資判断・発注操作はご自身で行っていただきます。投資は自己責任でお願いします。<br>
-  記載の実績はシグナル例であり、将来の利益を保証するものではありません。
+  記載の実績はシグナル例であり、将来の利益を保証するものではありません。<br><br>
+  <a href="/tokusho" style="color:#475569;text-decoration:underline;font-size:11px;">特定商取引法に基づく表記</a>
 </div>
 
 <script>
